@@ -1,0 +1,25 @@
+{
+  "name": "react-snippets-for-atom",
+  "main": "./lib/react-redux-snippets",
+  "author": "Nick Coleman <nick@itprojmgt.com>",
+  "version": "0.1.1",
+  "description": "React, React-Native, Redux, and test snippets to help with building your React apps in Atom.",
+  "keywords": [
+    "react",
+    "redux",
+    "react-native",
+    "snippets",
+    "es6",
+    "test",
+    "scripts"
+  ],
+  "activationCommands": {
+    "atom-workspace": "react-snippets-for-atom:toggle"
+  },
+  "repository": "git+https://github.com/nickcoleman/atom-react-snippets.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
+}

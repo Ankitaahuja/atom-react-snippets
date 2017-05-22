@@ -1,6 +1,6 @@
 # atom-react-redux-react-native-snippets package
 
-React, React-Native, Redux, and test snippets to help with building your React apps in Atom.
+React, React-Native, Redux, and Test snippets to help with building your React apps in Atom.
 
 # React
 
@@ -130,6 +130,8 @@ export default ${1}
     <Route path="${1}" component={${2}} />
 ```
 
+# React-Native
+
 ### `rncom` React-Native Component
 ```
       import React, { Component } from 'react';
@@ -173,6 +175,8 @@ export default ${1}
     export default styles;
 
 ```
+# Redux
+
 ### `rrd` Redux Reducer
 ```
       export default (state = INITIAL_STATE, action) => {
@@ -193,6 +197,9 @@ export default ${1}
 ```
 export const ${1} = "${1}"'
 ```
+
+# Testing
+
 ### `tdesc` Test Describe
 ```
     describe('${1}', () => {
