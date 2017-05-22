@@ -1,0 +1,213 @@
+'.source.js':
+  'Block Comment':
+    'prefix': 'bc'
+    'body': """
+      /************************************************************
+        ${1}
+      ************************************************************/
+    """
+  'Import React':
+    'prefix': 'imr'
+    'body': 'import React from "react";'
+  'Import React with Component':
+    'prefix': 'imrc'
+    'body': 'import React, { Component } from "react";'
+  'Export Default':
+    'prefix': 'ed'
+    'body': 'export default ${1};'
+  'React Stateless Component':
+    'prefix': 'rsl'
+    'body': """
+      import React from 'react';
+
+      const ${1} = () => (
+
+      );
+
+      export default ${1};
+
+    """
+  'React Constructor':
+    'prefix': 'rcon'
+    'body': """
+        constructor(props) {
+          super(props);
+
+          this.state = {$1};
+        }
+
+      """
+  'React Component':
+    'prefix': 'rcom'
+    'body': """
+        import React, { Component } from 'react';
+
+        class $1 extends Component {
+          render() {
+            return (
+              <div>
+                <h1>$1 Component</h1>
+              </div>
+            );
+          }
+        }
+
+        export default ${1};
+
+      """
+  'React Component Will Mount':
+    'prefix': 'rcwm'
+    'body': """
+        componentWillMount() {
+          ${1}
+        }
+      """
+  'React Component Did Mount':
+    'prefix': 'rcdm'
+    'body': """
+        componentDidMount() {
+          ${1}
+        }
+      """
+  'React Component Will Receive Props':
+    'prefix': 'rcwrp'
+    'body': """
+    componentWillReceiveProps() {
+      ${1}
+    }
+    """
+  'React Component Did Unmount':
+    'prefix': 'rcum'
+    'body': """
+        componentDidUnmount() {
+          ${1}
+        }
+      """
+  'React Component Will Update':
+    'prefix': 'rcwu'
+    'body': """
+        componentDidWillUpdate() {
+          ${1}
+        }
+      """
+  'React Component Did Update':
+    'prefix': 'rcdu'
+    'body': """
+        componentDidDidUpdate() {
+          ${1}
+        }
+      """
+  'React-Redux App Template':
+    'prefix': 'rrat'
+    'body': """
+      import React from 'react';
+      import ReactDom from 'react-dom';
+      import { Provider } from 'react-redux';
+      import { createStore, applyMiddleware } from 'redux';
+      // install of react-router@3.0.1 or change line below and routing to reflect latest version
+      import { Router, Route, IndexRoute, browserHistory} from 'react-router';
+      import thunk from 'redux-thunk';
+      import App from './components/App';
+
+      import reducers from './reducers';
+      const createStoreWithMiddleWare = applyMiddleware(thunk)(createStore);
+
+      ReactDOM.render(
+        <Provider store={createStoreWithMiddleware(reducers)}>
+          <Router history={browserHistory}>
+            <Route path="/" component={App} >
+              <IndexRoute component={$1} />
+              <Route path="${2}" component={${3}} />
+            </Route >
+          </Router>
+        </Provider>,
+        document.getElementById('app')
+      );
+
+    """
+  'React-Router Route':
+    'prefix': 'rrr'
+    'body': '<Route path="${1}" component={${2}} />'
+  'React-Native Component':
+    'prefix': 'rncom'
+    'body': """
+        import React, { Component } from 'react';
+        import { Text, View } from 'react-native';
+
+        class ${1} extends Component {
+          render() {
+            return (
+              <View>
+                <Text>${1} Component</Text>
+              </View>
+            );
+          }
+        }
+
+        export default ${1};
+
+      """
+
+  'React-Native Stateless Component':
+    'prefix': 'rnsl'
+    'body': """
+        import React from 'react';
+        import { Text, View } from 'react-native';
+
+        const $1 = () => (
+          <View>
+            <Text>${1} Component</Text>
+          </View>
+        )
+
+        export default ${1};
+
+      """
+
+  'React Native EStyleSheet':
+    'prefix': 'ess'
+    'body': """
+      import EStyleSheet from 'react-native-extended-stylesheet';
+
+      const styles = EStyleSheet.create({
+        ${1}
+      });
+
+      export default styles;
+
+    """
+  'Redux Reducer':
+    'prefix': 'rrd'
+    'body': """
+        export default (state = INITIAL_STATE, action) => {
+          switch(action.type) {
+            case ${1}:
+            default:
+              return state;
+          }
+        }
+      """
+  'Redux Reducer Initial State':
+    'prefix': 'rrs'
+    'body': """
+      const INITIAL_STATE: {
+        ${1}
+      };
+    """
+  'Redux Action Type':
+    'prefix': 'rat'
+    'body': 'export const ${1} = "${1}"'
+  'Test Describe':
+    'prefix': 'tdesc'
+    'body': """
+      describe('${1}', () => {
+        ${2}
+      })
+    """
+  'Test It':
+    'prefix': 'tit'
+    'body': """
+      it('should ${1}', () => {
+        ${2}
+      });
+    """
