@@ -148,9 +148,8 @@ export default ${1}
       export default ${1};
 ```
 
-'React-Native Stateless Component':
-  'prefix': 'rnsl'
-  'body': """
+### `rnsl` React-Native Stateless Component
+```
       import React from 'react';
       import { Text, View } from 'react-native';
 
@@ -161,12 +160,10 @@ export default ${1}
       )
 
       export default ${1};
+```
 
-    """
-
-'React Native EStyleSheet':
-  'prefix': 'ess'
-  'body': """
+### `ess` React Native EStyleSheet
+```
     import EStyleSheet from 'react-native-extended-stylesheet';
 
     const styles = EStyleSheet.create({
@@ -175,10 +172,9 @@ export default ${1}
 
     export default styles;
 
-  """
-'Redux Reducer':
-  'prefix': 'rrd'
-  'body': """
+```
+### `rrd` Redux Reducer
+```
       export default (state = INITIAL_STATE, action) => {
         switch(action.type) {
           case ${1}:
@@ -186,28 +182,26 @@ export default ${1}
             return state;
         }
       }
-    """
-'Redux Reducer Initial State':
-  'prefix': 'rrs'
-  'body': """
+```
+### `rrs` Redux Reducer Initial State
+```
     const INITIAL_STATE: {
       ${1}
     };
-  """
-'Redux Action Type':
-  'prefix': 'rat'
-  'body': 'export const ${1} = "${1}"'
-'Test Describe':
-  'prefix': 'tdesc'
-  'body': """
+```
+### `rat` Redux Action Type
+```
+export const ${1} = "${1}"'
+```
+### `tdesc` Test Describe
+```
     describe('${1}', () => {
       ${2}
     })
-  """
-'Test It':
-  'prefix': 'tit'
-  'body': """
+```
+### `tit` Test It
+```
     it('should ${1}', () => {
       ${2}
     });
-  """
+```
