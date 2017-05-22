@@ -5,7 +5,6 @@ React, React-Native, Redux, and test snippets to help with building your React a
 # React
 
 ### `imr` Import React
-
 ```
 import React from "react";
 ```
@@ -14,6 +13,7 @@ import React from "react";
 ```
 import React, { Component } from "react";'
 ```
+
 ### `ed` Export Default
 ```
 export default ${1}
@@ -56,51 +56,50 @@ export default ${1}
       export default ${1};
 ```
 
-'React Component Will Mount':
-  'prefix': 'rcwm'
-  'body': """
+### `rcwu` React Component Will Mount
+```
       componentWillMount() {
         ${1}
       }
-    """
-'React Component Did Mount':
-  'prefix': 'rcdm'
-  'body': """
+```
+
+### `rcdm` React Component Did Mount
+```
       componentDidMount() {
         ${1}
       }
-    """
-'React Component Will Receive Props':
-  'prefix': 'rcwrp'
-  'body': """
+```
+
+### `rcwrp` React Component Will Receive Props
+```
   componentWillReceiveProps() {
     ${1}
   }
-  """
-'React Component Did Unmount':
-  'prefix': 'rcum'
-  'body': """
+```
+
+### `rcum` React Component Did Unmount
+```
       componentDidUnmount() {
         ${1}
       }
-    """
-'React Component Will Update':
-  'prefix': 'rcwu'
-  'body': """
+```
+
+### `rcwu` React Component Will Update
+```
       componentDidWillUpdate() {
         ${1}
       }
-    """
-'React Component Did Update':
-  'prefix': 'rcdu'
-  'body': """
+```
+
+### `rcdu` React Component Did Update
+```
       componentDidDidUpdate() {
         ${1}
       }
-    """
-'React-Redux App Template':
-  'prefix': 'rrat'
-  'body': """
+```
+
+### `rrat` React-Redux App Template
+```
     import React from 'react';
     import ReactDom from 'react-dom';
     import { Provider } from 'react-redux';
@@ -124,14 +123,15 @@ export default ${1}
       </Provider>,
       document.getElementById('app')
     );
+```
 
-  """
-'React-Router Route':
-  'prefix': 'rrr'
-  'body': '<Route path="${1}" component={${2}} />'
-'React-Native Component':
-  'prefix': 'rncom'
-  'body': """
+### `rrr` React-Router Route
+```
+    <Route path="${1}" component={${2}} />
+```
+
+### `rncom` React-Native Component
+```
       import React, { Component } from 'react';
       import { Text, View } from 'react-native';
 
@@ -146,8 +146,7 @@ export default ${1}
       }
 
       export default ${1};
-
-    """
+```
 
 'React-Native Stateless Component':
   'prefix': 'rnsl'
