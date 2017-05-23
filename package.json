@@ -2,7 +2,7 @@
   "name": "react-snippets-for-atom",
   "main": "./lib/react-redux-snippets",
   "author": "Nick Coleman <nick@itprojmgt.com>",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "React, React-Native, Redux, and test snippets to help with building your React apps in Atom.",
   "keywords": [
     "react",
